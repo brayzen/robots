@@ -1,0 +1,25 @@
+<h1>Here are your ROBOT contestants!</h1>
+
+<%= link_to 'Make a Robot', new_robot_path %><br>
+<hr>
+<table>
+  <tr>
+    <th>Name:</th>
+    <th>Creator:</th>
+    <th>Description:</th>
+  </tr>
+
+  <% @robots.each do |robot| %>
+    <tr>
+      <td><%= robot.name %></td>
+      <td><%= robot.creator %></td>
+      <td><%= robot.description %></td>
+      <td><%= link_to 'Show', robot_path(robot) %></td>
+      <td><%= link_to 'Edit', edit_robot_path(robot) %></td>
+      <td><%= link_to 'Destroy', robot_path(robot),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
