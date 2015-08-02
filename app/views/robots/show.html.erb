@@ -1,3 +1,6 @@
+<h2><strong>'<%= @robot.name %>'</strong> is who we're analyzing now</h2>
+<hr>
+
 <p>
   <strong>Name:</strong>
   <%= @robot.name %>
@@ -13,4 +16,6 @@
   <%= @robot.description %>
 </p>
 
+
+<%= link_to 'Edit', edit_robot_path(@robot) %>
 <%= link_to 'Back', robots_path %>
